@@ -5,90 +5,114 @@
     <link rel="stylesheet" href="/style.css">
     <style>
         @import url('http://fonts.googleapis.com/css?family=Noto+Serif:wgth@400;700&display=swap');
-     body{
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 0 20px;
-        font-family: 'Noto Serif', serif;
-    
-     }   
-     p,h1,h2,h3,a,ul{
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
-        color: #222;
-     }
-nav{
+     /* Reset styles */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
-    padding-bottom: 10px;
+    align-items: center;
     border-bottom: 1px solid #ddd;
-    text-transform: uppercase;
+    padding-bottom: 10px;
 }
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-nav li{
+
+nav ul {
     list-style-type: none;
+    display: flex;
+}
+
+nav li {
     margin-left: 20px;
 }
 
-nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-nav li{
-    list-style-type: none;
-    margin-left: 20px;
-}
-nav h1{
-    font-size: 3em;
-}
-nav,p,nav a{
+nav a {
+    text-decoration: none;
     color: #777;
-    font-size: 300;
 }
-footer{
-    color: #777;
+
+nav h1 {
+    font-size: 2em;
+}
+
+footer {
     text-align: center;
-   margin: 80px auto;
+    margin-top: 80px;
+    color: #777;
 }
-h2{
+
+h2 {
     margin-bottom: 40px;
 }
-/*index style */
-/*details style*/
-/*create style*/
-.create-blog form{
+
+/* Index, Details, Create Styles */
+.form-container {
     max-width: 400px;
     margin: 0 auto;
 }
-.create-blog input
-.create-blog textarea{
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
     display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea {
     width: 100%;
-    margin: 10px 0;
     padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
-.create-blog label{
-    display: block;
-    margin-top: 24px;
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #777;
 }
-textarea{
-    height: 120px;
-}
-.create-blog button{
-    margin-top: 20px;
-    background: crimson;
+
+button {
+    background-color: crimson;
     color: white;
-    padding: 6px;
-    border: 0;
-    font-size: 1.2em;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #900;
+}
+nav,footer{
+    width: 100%;
 }
     </style>
 </head> 
